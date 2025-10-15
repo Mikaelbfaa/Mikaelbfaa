@@ -2,7 +2,7 @@ name: Generate Snake Animation
 
 on:
   schedule:
-    - cron: "0 */12 * * *"  # Gera a cada 12h
+    - cron: "0 */12 * * *"  # Gera a cada 12 horas
   workflow_dispatch:
 
 permissions:
@@ -10,20 +10,19 @@ permissions:
 
 jobs:
   generate:
-    name: Build Snake
+    name: Build Snake (Dark Mode)
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Generate snake.svg (dark theme)
+      - name: Generate snake.svg (GitHub Dark Style)
         uses: Platane/snk@v3
         with:
           github_user_name: Mikaelbfaa
           outputs: |
-            dist/snake.svg
-            dist/snake-dark.svg?palette=github-dark&color_snake=4F46E5&color_dots=#5A5A5A,#6E40C9,#9333EA,#C084FC,#E879F9
+            dist/snake-dark.svg?palette=github-dark&color_snake=#39D353&color_dots=#161b22,#0e4429,#006d32,#26a641,#39d353&background=#0d1117
 
       - name: Push generated snake.svg to output branch
         uses: crazy-max/ghaction-github-pages@v4
