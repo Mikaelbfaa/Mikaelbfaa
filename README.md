@@ -47,6 +47,6 @@
 
 ###
 
-<img src="https://raw.githubusercontent.com/Mikaelbfaa/Mikaelbfaa/output/snake.svg" alt="Snake animation" />
+<img src="https://raw.githubusercontent.com/Mikaelbfaa/Mikaelbfaa/output/snake-dark.svg" alt="Snake animation" />
 
 ###
